@@ -3,15 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Youssef Illustrator - Professional Graphic Designer & Digital Artist from Tunisia. Explore my vibrant portfolio and contact me for commissions.">
+  <meta name="keywords" content="graphic designer, illustrator, digital art, Tunisian artist, logo design, Youssef">
+  <meta name="author" content="Youssef Illustrator">
+  <meta property="og:title" content="Youssef Illustrator | Graphic Designer">
+  <meta property="og:description" content="Stunning digital art & illustrations. Available for hire.">
+  <meta property="og:image" content="proile.jpg">
+  <meta property="og:url" content="https://youssefillustrator.github.io/youssef-illustrator">
   <title>Youssef Illustrator | Graphic Designer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Inline Styles (No CSS file needed) -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #0A0F2C, #1E1A4F);
+      color: white;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .profile-container {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid rgba(255, 0, 170, 0.4);
+      box-shadow: 0 0 30px rgba(255, 0, 170, 0.6), 0 0 60px rgba(204, 255, 0, 0.4);
+      margin-bottom: 1.5rem;
+      animation: pulse 3s infinite alternate;
+    }
+
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(204, 255, 0, 0.7);
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #CCFF00;
+      font-style: italic;
+    }
+
+    .btn-primary {
+      background: transparent;
+      color: #CCFF00;
+      border: 2px solid #FF00AA;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 15px rgba(255, 0, 170, 0.5);
+    }
+
+    .btn-primary:hover {
+      background: #FF00AA;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(255, 0, 170, 0.8);
+    }
+
+    .gallery {
+      padding: 5rem 2rem;
+      text-align: center;
+      display: none;
+    }
+
+    .gallery h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #CCFF00;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      flex: 1 1 300px;
+      max-width: 400px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s ease;
+      border: 2px solid rgba(255, 0, 170, 0.3);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .contact {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #CCFF00;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .btn-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: transparent;
+      color: white;
+      border: 2px solid #FF00AA;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+    }
+
+    .btn-social:hover {
+      background: #FF00AA;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 30px rgba(255,0,170,0.6), 0 0 60px rgba(204,255,0,0.4); }
+      100% { box-shadow: 0 0 40px rgba(255,0,170,0.8), 0 0 80px rgba(204,255,0,0.6); }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      .tagline { font-size: 1.1rem; }
+      .btn-primary { padding: 0.8rem 2rem; font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
+
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="profile-container">
-      <img src="images/proile.jpg" alt="Youssef Illustrator" class="profile-pic" />
+      <img src="proile.jpg" alt="Youssef Illustrator" class="profile-pic" />
     </div>
     <h1>Youssef Illustrator</h1>
     <p class="tagline">Digital Alchemist | Turning Vision into Visuals</p>
@@ -23,13 +208,13 @@
     <h2>My Creations</h2>
     <div class="gallery-container">
       <div class="gallery-item">
-        <img src="images/f5fc902b-b1cd-4cbb-8b6c-9956ee4a545b.jpg" alt="Artwork 1" />
+        <img src="f5fc902b-b1cd-4cbb-8b6c-9956ee4a545b.jpg" alt="Artwork 1" />
       </div>
       <div class="gallery-item">
-        <img src="images/04825c9b-cb14-4f7f-aeb8-b977bc447bbf.jpg" alt="Artwork 2" />
+        <img src="04825c9b-cb14-4f7f-aeb8-b977bc447bbf.jpg" alt="Artwork 2" />
       </div>
       <div class="gallery-item">
-        <img src="images/5a716524-f200-4679-b13f-76549d585a3c.jpg" alt="Artwork 3" />
+        <img src="5a716524-f200-4679-b13f-76549d585a3c.jpg" alt="Artwork 3" />
       </div>
     </div>
     <p class="gallery-text">Swipe or click to explore</p>
@@ -48,6 +233,20 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <!-- Script for Button Interaction -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const seeArtBtn = document.getElementById("seeArtBtn");
+      const hero = document.querySelector(".hero");
+      const gallery = document.getElementById("gallery");
+
+      seeArtBtn.addEventListener("click", function () {
+        hero.style.display = "none";
+        gallery.style.display = "block";
+        gallery.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+
 </body>
 </html>
